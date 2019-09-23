@@ -229,7 +229,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="1">
-<input type="hidden" id="yelog_site_word_count" value="685">
+<input type="hidden" id="yelog_site_word_count" value="1k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -338,12 +338,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-23 22:02:35'>2019-09-23 17:46</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-23 22:43:04'>2019-09-23 17:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:685</span>
+        <span>字数:1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -373,7 +373,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo简介"><span class="toc-text">Hexo简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo搭建"><span class="toc-text">Hexo搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo部署到GitPage"><span class="toc-text">Hexo部署到GitPage</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Hexo简介"><span class="toc-text">1. Hexo简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Hexo搭建"><span class="toc-text">2. Hexo搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Hexo部署到GitPage"><span class="toc-text">3. Hexo部署到GitPage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Hexo部署到Nginx"><span class="toc-text">4. Hexo部署到Nginx</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -399,8 +399,8 @@
 </ul>
 </blockquote>
 <hr>
-<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一个基于NodeJs的博客制作工具，本身是可以当做博客服务器来使用，但是为了更好的性能，一般会将Hexo产生的静态博客页面(HTML)部署到专业的服务器上使用。<br>所以Hexo更是一个<strong>静态页面生生成、部署工具</strong></p>
-<h2 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h2><ol>
+<h2 id="1-Hexo简介"><a href="#1-Hexo简介" class="headerlink" title="1. Hexo简介"></a>1. Hexo简介</h2><p>Hexo是一个基于NodeJs的博客制作工具，本身是可以当做博客服务器来使用，但是为了更好的性能，一般会将Hexo产生的静态博客页面(HTML)部署到专业的服务器上使用。<br>所以Hexo更是一个<strong>静态页面生生成、部署工具</strong></p>
+<h2 id="2-Hexo搭建"><a href="#2-Hexo搭建" class="headerlink" title="2. Hexo搭建"></a>2. Hexo搭建</h2><ol>
 <li><p>Hexo 准备<br>Hexo底层基于NodeJS和Git, 所以请确保它们已经就位。如果没有，请参考: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a></p>
 </li>
 <li><p>Hexo 安装</p>
@@ -441,7 +441,7 @@ $ hexo generate</code></pre>
 <p>现在已经生成了一个piblic文件夹，文件夹包含着所有包装好的博客内容页面。而后面的部署操作的实际就是操作这个文件夹。</p>
 </li>
 </ol>
-<h2 id="Hexo部署到GitPage"><a href="#Hexo部署到GitPage" class="headerlink" title="Hexo部署到GitPage"></a>Hexo部署到GitPage</h2><ol>
+<h2 id="3-Hexo部署到GitPage"><a href="#3-Hexo部署到GitPage" class="headerlink" title="3. Hexo部署到GitPage"></a>3. Hexo部署到GitPage</h2><ol>
 <li><p>GitPage是什么<br>Gitpage是由GitHub托管的项目空间，免费，免运维。所以成为很多人的项目空间首选。</p>
 </li>
 <li><p>GitHub 端的设置</p>
@@ -468,9 +468,63 @@ branch: master</code></pre><p>其中 xxxxx 是你的github账户名称。</p>
 <p>上传成功以后,就能在github项目下，看到上传的内容。<br>并且，通过访问: <a href="https://xxxxx.github.io" target="_blank" rel="noopener">https://xxxxx.github.io</a> 就能够访问你的博客了！！<br>其中 xxxxx 是你的github账户名称。</p>
 <img src="/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx上的实践/3.png" title="项目名称">
 
+<h2 id="4-Hexo部署到Nginx"><a href="#4-Hexo部署到Nginx" class="headerlink" title="4. Hexo部署到Nginx"></a>4. Hexo部署到Nginx</h2><ol>
+<li><p>Nginx简介<br>Nginx作为当今非常主流的web服务器，同时具有代理和反向代理等功能。用户覆盖率极高。今天我们就把Hero生成的博客静态HTML文件，部署到Nginx上。</p>
+</li>
+<li><p>Nginx安装配置不做介绍，自己去掌握。</p>
+</li>
+<li><p>部署的实质就是将’hexo generate’ 生成的public文件夹，作为一个nginx的server去运行。</p>
+<ol>
+<li><p>在Nginx中新增一个server,设置hexo的根目录为:’/opt/xxxxx/keepup/‘:</p>
+<pre><code># server hexo
+server {
+  listen       4000 ssl http2;
+  listen       [::]:4000 ssl http2;
+  server_name  www.whsasf.com localhost;
+charset UTF-8;
+  root        /opt/xxxxx/keepup/;
 
+  # It is *strongly* recommended to generate unique DH parameters
+  # Generate them with: openssl dhparam -out /etc/pki/nginx/dhparams.pem 2048
+  #ssl_dhparam &quot;/etc/pki/nginx/dhparams.pem&quot;;
+  ssl_certificate &quot;/etc/letsencrypt/live/whsasf.com/fullchain.pem&quot;;
+ssl_certificate_key &quot;/etc/letsencrypt/live/whsasf.com/privkey.pem&quot;;
+ssl_session_cache shared:SSL:1m;
+  ssl_session_timeout  10m;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers HIGH:SEED:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!RSAPSK:!aDH:!aECDH:!EDH-DSS-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA:!SRP;
+  ssl_prefer_server_ciphers on;
+  # Load configuration files for the default server block.
+  include /etc/nginx/default.d/*.conf;
 
+  location /{
+  }
+# static
+location /static/{
+  autoindex on;
+}
+# favicon
+location = /favicon.ico {
+  log_not_found off;
+  access_log off;
+}
+  error_page 404 /40x.html;
+      location = /40x.html {
+  root   /opt/xxxxx/gt_web/error_page;
+  }
 
+  error_page 500 502 503 504 /50x.html;
+      location = /50x.html {
+  root /opt/xxxxx/gt_web/error_page;
+  }
+}</code></pre></li>
+<li><p>将public文件夹拷贝到nginx server指定的路径’/opt/xxxxx/keepup/‘。如果在远程机器中部署，可以使用scp等工具。</p>
+</li>
+<li><p>然后，重新启动Nginx服务, 就可以在浏览器中访问 hexo博客了!<br>示例中的访问地址应为: <a href="https://www.whsasf.com:4000">https://www.whsasf.com:4000</a></p>
+</li>
+</ol>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 whsasf@126.com </span>
@@ -485,10 +539,10 @@ branch: master</code></pre><p>其中 xxxxx 是你的github账户名称。</p>
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>Hexo配置并分别部署到Gitpage和Nginx上的实践</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">685</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="whsasf">whsasf</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-23, 17:46:09</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-23, 22:02:35</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-23, 22:43:04</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx上的实践/" title="Hexo配置并分别部署到Gitpage和Nginx上的实践">https://www.whsasf.com:4000/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx上的实践/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
