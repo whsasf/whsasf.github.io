@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Hexo配置并分别部署到Gitpage和Nginx server上的实践</title>
-      <link href="/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx-server%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
-      <url>/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx-server%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/</url>
+      <title>Hexo配置并分别部署到Gitpage和Nginx上的实践</title>
+      <link href="/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
+      <url>/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/</url>
       
-        <content type="html"><![CDATA[<blockquote><center>摘要</center>本篇文章主要介绍了以下内容:<ul><li>Hexo的搭建和基本配置</li><li>如何将Hexo博客部署到gitpage上</li><li>如何将Hexo博客部署到第三方服务器（Nginx）上</li></ul></blockquote><hr><p>sdsdsdsd</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><center>摘要</center>本篇文章主要介绍了以下内容:<ul><li>Hexo的搭建和基本配置</li><li>如何将Hexo博客部署到gitpage上</li><li>如何将Hexo博客部署到第三方服务器（Nginx）上</li></ul></blockquote><hr><h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一个基于NodeJs的博客制作工具，本身是可以当做博客服务器来使用，但是为了更好的性能，一般会将Hexo产生的静态博客页面(HTML)部署到专业的服务器上使用。<br>所以Hexo更是一个<strong>静态页面生生成、部署工具</strong></p><h2 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h2><ol><li><p>Hexo 准备<br>Hexo底层基于NodeJS和Git, 所以请确保它们已经就位。如果没有，请参考: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a><br><img src="Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/1.png" alt="markdown编辑器"></p></li><li><p>Hexo 安装</p><pre><code class="bash">$ npm install -g hexo-cli</code></pre></li><li><p>Hexo 创建</p><pre><code class="bash">$ hexo init &lt;folder&gt;  # folder是博客系统的名称$ cd &lt;folder&gt;$ npm install</code></pre></li><li><p>Hexo 目录结构</p><pre><code class="bash">├── _config.yml #除主题中的 _comfig.xml外，最常用的一个配置文件├── package.json #依赖包├── scaffolds    #模板文件├── source|   ├── _drafts|   └── _posts   #具体博客页面└── themes       #主题目录</code></pre></li><li><p>Hexo 创建博客页面</p><pre><code class="bash">$ hexo new post &lt;title&gt;  # title就是博客页的标题</code></pre></li><li><p>编辑Hexo博客页面<br>基于上一步中创建的博客页面，可以使用第三方markdown编辑工具继续编辑博客页面，直至完成页面内容。</p></li><li><p>时代谁都所</p></li></ol>]]></content>
       
       
       <categories>

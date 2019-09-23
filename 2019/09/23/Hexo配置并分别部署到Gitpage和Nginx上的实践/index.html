@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hexo配置并分别部署到Gitpage和Nginx server上的实践 | KeepUp</title>
+  <title>Hexo配置并分别部署到Gitpage和Nginx上的实践 | KeepUp</title>
   <meta name="keywords" content=" hexo , nginx , gitpage , 建站 ">
-  <meta name="description" content="Hexo配置并分别部署到Gitpage和Nginx server上的实践 | KeepUp">
+  <meta name="description" content="Hexo配置并分别部署到Gitpage和Nginx上的实践 | KeepUp">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介王海生 毕业于BUPT，从事过技术支持，安全测试，后端测试，软件开发工作 喜欢研究新技术及创意，包括但不限于以下方向:  编程: Python,Shell,Java,C 前端: JavaScript,BootStrap 容器及虚拟化: Docker,Kubernetes 自动化:Ansible 创意设计: PhothShop,Illustrator 诗词歌赋  联系方式 QQ: 51448">
 <meta name="keywords" content="hexo, blog">
@@ -229,7 +229,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="127">
+<input type="hidden" id="yelog_site_word_count" value="400">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -289,10 +289,10 @@
     <nav id="title-list-nav">
         
         <a  class="工具 "
-           href="/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx-server上的实践/"
+           href="/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx上的实践/"
            data-tag="hexo,nginx,gitpage,建站"
            data-author="" >
-            <span class="post-title" title="Hexo配置并分别部署到Gitpage和Nginx server上的实践">Hexo配置并分别部署到Gitpage和Nginx server上的实践</span>
+            <span class="post-title" title="Hexo配置并分别部署到Gitpage和Nginx上的实践">Hexo配置并分别部署到Gitpage和Nginx上的实践</span>
             <span class="post-date" title="2019-09-23 17:46:09">2019/09/23</span>
         </a>
         
@@ -316,9 +316,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Hexo配置并分别部署到Gitpage和Nginx-server上的实践" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Hexo配置并分别部署到Gitpage和Nginx上的实践" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hexo配置并分别部署到Gitpage和Nginx server上的实践</h1>
+        <h1 class="article-title">Hexo配置并分别部署到Gitpage和Nginx上的实践</h1>
     
     <div class="article-meta">
         
@@ -346,12 +346,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-23 18:04:15'>2019-09-23 17:46</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-23 18:47:14'>2019-09-23 17:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:52</span>
+        <span>字数:325</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -381,7 +381,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo简介"><span class="toc-text">Hexo简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo搭建"><span class="toc-text">Hexo搭建</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -407,7 +407,35 @@
 </ul>
 </blockquote>
 <hr>
-<p>sdsdsdsd</p>
+<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一个基于NodeJs的博客制作工具，本身是可以当做博客服务器来使用，但是为了更好的性能，一般会将Hexo产生的静态博客页面(HTML)部署到专业的服务器上使用。<br>所以Hexo更是一个<strong>静态页面生生成、部署工具</strong></p>
+<h2 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h2><ol>
+<li><p>Hexo 准备<br>Hexo底层基于NodeJS和Git, 所以请确保它们已经就位。如果没有，请参考: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a><br><img src="Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/1.png" alt="markdown编辑器"></p>
+</li>
+<li><p>Hexo 安装</p>
+<pre><code class="bash">$ npm install -g hexo-cli</code></pre>
+</li>
+<li><p>Hexo 创建</p>
+<pre><code class="bash">$ hexo init &lt;folder&gt;  # folder是博客系统的名称
+$ cd &lt;folder&gt;
+$ npm install</code></pre>
+</li>
+<li><p>Hexo 目录结构</p>
+<pre><code class="bash">├── _config.yml #除主题中的 _comfig.xml外，最常用的一个配置文件
+├── package.json #依赖包
+├── scaffolds    #模板文件
+├── source
+|   ├── _drafts
+|   └── _posts   #具体博客页面
+└── themes       #主题目录</code></pre>
+</li>
+<li><p>Hexo 创建博客页面</p>
+<pre><code class="bash">$ hexo new post &lt;title&gt;  # title就是博客页的标题</code></pre>
+</li>
+<li><p>编辑Hexo博客页面<br>基于上一步中创建的博客页面，可以使用第三方markdown编辑工具继续编辑博客页面，直至完成页面内容。</p>
+</li>
+<li><p>时代谁都所</p>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 whsasf@126.com </span>
@@ -421,12 +449,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hexo配置并分别部署到Gitpage和Nginx server上的实践</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">52</span></p>
+    <p><span class="copy-title">文章标题:</span>Hexo配置并分别部署到Gitpage和Nginx上的实践</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">325</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="whsasf">whsasf</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-23, 17:46:09</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-23, 18:04:15</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx-server上的实践/" title="Hexo配置并分别部署到Gitpage和Nginx server上的实践">https://www.whsasf.com:4000/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx-server上的实践/</a>
+    <p><span class="copy-title">最后更新:</span>2019-09-23, 18:47:14</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx上的实践/" title="Hexo配置并分别部署到Gitpage和Nginx上的实践">https://www.whsasf.com:4000/2019/09/23/Hexo配置并分别部署到Gitpage和Nginx上的实践/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
