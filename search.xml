@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Python 并发，并行，多线程</title>
+      <link href="/2019/10/12/Python-%E5%B9%B6%E5%8F%91%EF%BC%8C%E5%B9%B6%E8%A1%8C%EF%BC%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <url>/2019/10/12/Python-%E5%B9%B6%E5%8F%91%EF%BC%8C%E5%B9%B6%E8%A1%8C%EF%BC%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<blockquote><center>摘要</center>本篇文章主要介绍了以下内容:<ul><li>并发与并行，</li><li>多线程，多进程</li><li>Python GIL,互斥锁</li></ul></blockquote><hr><h2 id="1-并发与并行-单个CPU上只有并发，没有并行"><a href="#1-并发与并行-单个CPU上只有并发，没有并行" class="headerlink" title="1. 并发与并行(单个CPU上只有并发，没有并行)"></a>1. 并发与并行(单个CPU上只有并发，没有并行)</h2><p><strong>并发(concurrency)</strong>: 一系列任务被(单个)CPU按照某一顺序先后执行和挂起。CPU执行速度和切换速度很快，使得看起来像是这些任务在同时运行一样。实际上任一瞬间，只有一个任务在执行。</p><img src="/2019/10/12/Python-并发，并行，多线程/concurrency.png" title="并发"><p><strong>并行(parallel)</strong>: 在有多个CPU或者CPU有多核的情况下。多个任务可以被分配到多个CPU上并行运行。即单个CPU（核心）仍然按照并发的方式执行，多个CPU（核心）一起并发运行，就是并行。并行运算，在任一瞬间，都有多个（cpu个数或核心数）任务在运行。是真正意义上的<strong>并</strong>运算。</p><img src="/2019/10/12/Python-并发，并行，多线程/parallel.png" title="并行">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python3 </tag>
+            
+            <tag> python </tag>
+            
+            <tag> GIL </tag>
+            
+            <tag> 并发 </tag>
+            
+            <tag> 并行 </tag>
+            
+            <tag> 多线程 </tag>
+            
+            <tag> 多进程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo配置并分别部署到Gitpage和Nginx上的实践</title>
       <link href="/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
       <url>/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/</url>
