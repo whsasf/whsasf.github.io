@@ -6,18 +6,21 @@
   <meta name="keywords" content>
   <meta name="description" content="关于我 &amp; 留言板 | KeepUp">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="个人简介王海生 毕业于BUPT，从事过技术支持，安全测试，后端测试，软件开发工作 喜欢研究新技术及创意，包括但不限于以下方向:  编程: Python,Shell,Java,C 前端: JavaScript,BootStrap 容器及虚拟化: Docker,Kubernetes 自动化:Ansible 创意设计: PhothShop,Illustrator 诗词歌赋  联系方式 QQ: 51448">
-<meta name="keywords" content="hexo, blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我 &amp; 留言板">
-<meta property="og:url" content="https://blog.whsasf.com:4000/about/index.html">
+<meta name="description" content="摘要 本篇文章主要介绍了以下内容:   并发与并行， 多线程，多进程 Python GIL,互斥锁    1. 并发与并行(单个CPU上只有并发，没有并行)并发(concurrency): 一系列任务被(单个)CPU按照某一顺序先后执行和挂起。CPU执行速度和切换速度很快，使得看起来像是这些任务在同时运行一样。实际上任一瞬间，只有一个任务在执行。   并行(parallel): 在有多个CPU或">
+<meta name="keywords" content="python3,python,GIL,并发,并行,多线程,多进程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 并发，并行，多线程">
+<meta property="og:url" content="https://blog.whsasf.com:4000/2019/10/12/Python-并发，并行，多线程/index.html">
 <meta property="og:site_name" content="KeepUp">
-<meta property="og:description" content="个人简介王海生 毕业于BUPT，从事过技术支持，安全测试，后端测试，软件开发工作 喜欢研究新技术及创意，包括但不限于以下方向:  编程: Python,Shell,Java,C 前端: JavaScript,BootStrap 容器及虚拟化: Docker,Kubernetes 自动化:Ansible 创意设计: PhothShop,Illustrator 诗词歌赋  联系方式 QQ: 51448">
+<meta property="og:description" content="摘要 本篇文章主要介绍了以下内容:   并发与并行， 多线程，多进程 Python GIL,互斥锁    1. 并发与并行(单个CPU上只有并发，没有并行)并发(concurrency): 一系列任务被(单个)CPU按照某一顺序先后执行和挂起。CPU执行速度和切换速度很快，使得看起来像是这些任务在同时运行一样。实际上任一瞬间，只有一个任务在执行。   并行(parallel): 在有多个CPU或">
 <meta property="og:locale" content="Zh">
-<meta property="og:updated_time" content="2019-09-23T09:32:26.768Z">
+<meta property="og:image" content="https://blog.whsasf.com:4000/2019/10/12/Python-并发，并行，多线程/concurrency.png">
+<meta property="og:image" content="https://blog.whsasf.com:4000/2019/10/12/Python-并发，并行，多线程/parallel.png">
+<meta property="og:updated_time" content="2019-10-12T03:44:16.254Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我 &amp; 留言板">
-<meta name="twitter:description" content="个人简介王海生 毕业于BUPT，从事过技术支持，安全测试，后端测试，软件开发工作 喜欢研究新技术及创意，包括但不限于以下方向:  编程: Python,Shell,Java,C 前端: JavaScript,BootStrap 容器及虚拟化: Docker,Kubernetes 自动化:Ansible 创意设计: PhothShop,Illustrator 诗词歌赋  联系方式 QQ: 51448">
+<meta name="twitter:title" content="Python 并发，并行，多线程">
+<meta name="twitter:description" content="摘要 本篇文章主要介绍了以下内容:   并发与并行， 多线程，多进程 Python GIL,互斥锁    1. 并发与并行(单个CPU上只有并发，没有并行)并发(concurrency): 一系列任务被(单个)CPU按照某一顺序先后执行和挂起。CPU执行速度和切换速度很快，使得看起来像是这些任务在同时运行一样。实际上任一瞬间，只有一个任务在执行。   并行(parallel): 在有多个CPU或">
+<meta name="twitter:image" content="https://blog.whsasf.com:4000/2019/10/12/Python-并发，并行，多线程/concurrency.png">
 
 
 <link rel="icon" href="/img/avatar.png">
