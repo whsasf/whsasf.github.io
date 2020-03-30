@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>jenkins pipeline 集成 github webhook</title>
+      <link href="/2020/03/30/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/"/>
+      <url>/2020/03/30/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/</url>
+      
+        <content type="html"><![CDATA[<blockquote><center>Jenkins pipeline 集成 github webhook </center>本篇文章主要介绍了以下内容:<ul><li>Jenkins pipeline 简介</li><li>github webhook 简介</li><li>Generic webhook trigger 简介</li><li>集成</li></ul></blockquote><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> DevOps </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DevOps </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Jenkins </tag>
+            
+            <tag> pipeline </tag>
+            
+            <tag> github webhook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo配置并分别部署到Gitpage和Nginx上的实践</title>
       <link href="/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
       <url>/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/</url>
