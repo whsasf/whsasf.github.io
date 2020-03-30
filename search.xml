@@ -8,7 +8,7 @@
       <link href="/2020/03/30/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/"/>
       <url>/2020/03/30/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/</url>
       
-        <content type="html"><![CDATA[<blockquote><center>Jenkins pipeline 集成 github webhook </center>本篇文章主要介绍了以下内容:<ul><li>Jenkins pipeline 简介</li><li>github webhook 简介</li><li>Generic webhook trigger 简介</li><li>集成</li></ul></blockquote><hr>]]></content>
+        <content type="html"><![CDATA[<blockquote><center>Jenkins pipeline 集成 github webhook </center>本篇文章主要介绍了以下内容:<ul><li>Jenkins pipeline 简介</li><li>github webhook 简介</li><li>Generic webhook trigger 简介</li><li>集成</li></ul></blockquote><hr><h2 id="1-Jenkins-pipeline-简介"><a href="#1-Jenkins-pipeline-简介" class="headerlink" title="1. Jenkins pipeline 简介"></a>1. Jenkins pipeline 简介</h2><p>Jenkins 发展到2.x, 出现了pipeline，实现了真正意义上的 “pipeline as code”，即 <strong>完全的代码驱动构建</strong>。使用pipeline进行构建的过程跟用dockerfile进行镜像构建非常相似。pipeline是写在Jenkinsfile文件里面的。</p><p>以下是一段经典的jenkins pipeline “hello world” 示例： </p><pre><code>pipeline {    agent { docker &#39;centos:latest&#39; }    stages {        stage(&#39;build&#39;) {            steps {                sh &#39;echo helloworld!&#39;            }        }    }}</code></pre><p>其中，整个构建是在一个 最新版本的centos docker 镜像中构建，然后就能在输出中看到 “ hello world” 了。输出截图如下:</p><img src="/2020/03/30/jenkins-pipeline-集成-github-webhook/hello_world.png" title="hello world">  <p>更多Jenkins知识，请参考官方网站: <a href="https://jenkins.io/n" target="_blank" rel="noopener">Jenkins教程</a></p>]]></content>
       
       
       <categories>
