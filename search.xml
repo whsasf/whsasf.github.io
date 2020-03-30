@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>jenkins pipeline 集成 github webhook</title>
+      <link href="/2020/01/01/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/"/>
+      <url>/2020/01/01/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/</url>
+      
+        <content type="html"><![CDATA[<blockquote><center>Jenkins pipeline 集成 github webhook </center>本篇文章主要介绍了以下内容:<ul><li>Jenkins pipeline 简介</li><li>Generic webhook trigger 简介</li><li>github webhook 简介</li><li>集成</li></ul></blockquote><hr><h2 id="1-Jenkins-pipeline-简介"><a href="#1-Jenkins-pipeline-简介" class="headerlink" title="1. Jenkins pipeline 简介"></a>1. Jenkins pipeline 简介</h2><p>Jenkins 发展到2.x, 出现了pipeline，实现了真正意义上的 “pipeline as code”，即 <strong>完全的代码驱动构建</strong>。使用pipeline进行构建的过程跟用dockerfile进行镜像构建非常相似。pipeline是写在Jenkinsfile文件里面的。</p><p>以下是一段经典的jenkins pipeline “hello world” 示例： </p><pre><code>pipeline {    agent { docker &#39;centos:latest&#39; }    stages {        stage(&#39;build&#39;) {            steps {                sh &#39;echo helloworld!&#39;            }        }    }}</code></pre><p>其中，整个构建是在一个 最新版本的centos docker 镜像中构建，然后就能在输出中看到 “ hello world” 了。输出截图如下:</p><img src="/2020/01/01/jenkins-pipeline-集成-github-webhook/hello_world.png" title="hello world">  <p>更多Jenkins知识，请参考官方网站: <a href="https://jenkins.io/n" target="_blank" rel="noopener">Jenkins教程</a> 。从图中可以看到整个构建过程是在blueocean中构建的，blueocean很有趣，具体参考教程。</p><h2 id="2-Generic-webhook-trigger-简介"><a href="#2-Generic-webhook-trigger-简介" class="headerlink" title="2. Generic webhook trigger 简介"></a>2. Generic webhook trigger 简介</h2><h3 id="1-常见的构建触发有3种"><a href="#1-常见的构建触发有3种" class="headerlink" title="1. 常见的构建触发有3种:"></a>1. 常见的构建触发有3种:</h3><ol><li>时间触发，类似于cron。</li><li>代码仓库轮训触发，理论上轮训越频繁，持续集成的效果越好</li><li>事件触发，种类很多。本章只介绍github webhook 触发。</li></ol><h3 id="2-Generic-webhook-trigger"><a href="#2-Generic-webhook-trigger" class="headerlink" title="2. Generic webhook trigger"></a>2. Generic webhook trigger</h3><p>Generic webhook trigger 是一个 jenkins的插件，用来支持事件触发，支持pipeline。意味着安装插件后，直接在pipeline编写触发接受规则即可。使用该插件的主要步骤如下：</p><ol><li>通过Jenkins 插件管理器安装该插件: <img src="/2020/01/01/jenkins-pipeline-集成-github-webhook/generic_install.png" title="Generic webhook trigger插件安装">  </li><li></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> DevOps </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DevOps </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Jenkins </tag>
+            
+            <tag> pipeline </tag>
+            
+            <tag> github webhook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo配置并分别部署到Gitpage和Nginx上的实践</title>
       <link href="/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
       <url>/2019/09/23/Hexo%E9%85%8D%E7%BD%AE%E5%B9%B6%E5%88%86%E5%88%AB%E9%83%A8%E7%BD%B2%E5%88%B0Gitpage%E5%92%8CNginx%E4%B8%8A%E7%9A%84%E5%AE%9E%E8%B7%B5/</url>
@@ -99,39 +132,6 @@
             <tag> 创意 </tag>
             
             <tag> 诗词歌赋 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jenkins pipeline 集成 github webhook</title>
-      <link href="/2019/03/30/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/"/>
-      <url>/2019/03/30/jenkins-pipeline-%E9%9B%86%E6%88%90-github-webhook/</url>
-      
-        <content type="html"><![CDATA[<blockquote><center>Jenkins pipeline 集成 github webhook </center>本篇文章主要介绍了以下内容:<ul><li>Jenkins pipeline 简介</li><li>Generic webhook trigger 简介</li><li>github webhook 简介</li><li>集成</li></ul></blockquote><hr><h2 id="1-Jenkins-pipeline-简介"><a href="#1-Jenkins-pipeline-简介" class="headerlink" title="1. Jenkins pipeline 简介"></a>1. Jenkins pipeline 简介</h2><p>Jenkins 发展到2.x, 出现了pipeline，实现了真正意义上的 “pipeline as code”，即 <strong>完全的代码驱动构建</strong>。使用pipeline进行构建的过程跟用dockerfile进行镜像构建非常相似。pipeline是写在Jenkinsfile文件里面的。</p><p>以下是一段经典的jenkins pipeline “hello world” 示例： </p><pre><code>pipeline {    agent { docker &#39;centos:latest&#39; }    stages {        stage(&#39;build&#39;) {            steps {                sh &#39;echo helloworld!&#39;            }        }    }}</code></pre><p>其中，整个构建是在一个 最新版本的centos docker 镜像中构建，然后就能在输出中看到 “ hello world” 了。输出截图如下:</p><img src="/2019/03/30/jenkins-pipeline-集成-github-webhook/hello_world.png" title="hello world">  <p>更多Jenkins知识，请参考官方网站: <a href="https://jenkins.io/n" target="_blank" rel="noopener">Jenkins教程</a> 。从图中可以看到整个构建过程是在blueocean中构建的，blueocean很有趣，具体参考教程。</p><h2 id="2-Generic-webhook-trigger-简介"><a href="#2-Generic-webhook-trigger-简介" class="headerlink" title="2. Generic webhook trigger 简介"></a>2. Generic webhook trigger 简介</h2><h3 id="1-常见的构建触发有3种"><a href="#1-常见的构建触发有3种" class="headerlink" title="1. 常见的构建触发有3种:"></a>1. 常见的构建触发有3种:</h3><ol><li>时间触发，类似于cron。</li><li>代码仓库轮训触发，理论上轮训越频繁，持续集成的效果越好</li><li>事件触发，种类很多。本章只介绍github webhook 触发。</li></ol><h3 id="2-Generic-webhook-trigger"><a href="#2-Generic-webhook-trigger" class="headerlink" title="2. Generic webhook trigger"></a>2. Generic webhook trigger</h3><p>Generic webhook trigger 是一个 jenkins的插件，用来支持事件触发，支持pipeline。意味着安装插件后，直接在pipeline编写触发接受规则即可。使用该插件的主要步骤如下：</p><ol><li>通过Jenkins 插件管理器安装该插件: <img src="/2019/03/30/jenkins-pipeline-集成-github-webhook/generic_install.png" title="Generic webhook trigger插件安装">  </li><li></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> DevOps </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> DevOps </tag>
-            
-            <tag> 运维 </tag>
-            
-            <tag> Jenkins </tag>
-            
-            <tag> pipeline </tag>
-            
-            <tag> github webhook </tag>
             
         </tags>
       

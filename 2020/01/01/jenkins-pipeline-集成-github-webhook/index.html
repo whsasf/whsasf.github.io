@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>关于我 &amp; 留言板 | KeepUp</title>
-  <meta name="keywords" content>
-  <meta name="description" content="关于我 &amp; 留言板 | KeepUp">
+  <title>jenkins pipeline 集成 github webhook | KeepUp</title>
+  <meta name="keywords" content=" DevOps , 运维 , Jenkins , pipeline , github webhook ">
+  <meta name="description" content="jenkins pipeline 集成 github webhook | KeepUp">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介王海生 毕业于BUPT，从事过技术支持，安全测试，后端测试，软件开发工作 喜欢研究新技术及创意，包括但不限于以下方向:  编程: Python,Shell,Java,C 前端: JavaScript,BootStrap 容器及虚拟化: Docker,Kubernetes 自动化:Ansible 创意设计: PhothShop,Illustrator 诗词歌赋  联系方式 QQ: 51448">
 <meta name="keywords" content="hexo, blog">
@@ -670,24 +670,44 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-jenkins-pipeline-集成-github-webhook" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于我 &amp; 留言板</h1>
+        <h1 class="article-title">jenkins pipeline 集成 github webhook</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="DevOps">DevOps</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color2">DevOps</a>
+            
+            <a href="javascript:" class="color3">运维</a>
+            
+            <a href="javascript:" class="color3">Jenkins</a>
+            
+            <a href="javascript:" class="color4">pipeline</a>
+            
+            <a href="javascript:" class="color5">github webhook</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-01-02 17:27:27'>2018-09-23 13:59</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-30 16:41:28'>2020-01-01 15:55</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:106</span>
+        <span>字数:358</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -717,7 +737,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#个人简介"><span class="toc-text">个人简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#联系方式"><span class="toc-text">联系方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网站备案信息"><span class="toc-text">网站备案信息</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Jenkins-pipeline-简介"><span class="toc-text">1. Jenkins pipeline 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Generic-webhook-trigger-简介"><span class="toc-text">2. Generic webhook trigger 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-常见的构建触发有3种"><span class="toc-text">1. 常见的构建触发有3种:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Generic-webhook-trigger"><span class="toc-text">2. Generic webhook trigger</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -732,24 +752,43 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>王海生</p>
-<p>毕业于BUPT，从事过技术支持，安全测试，后端测试，软件开发工作</p>
-<p>喜欢研究新技术及创意，包括但不限于以下方向:</p>
+        <blockquote>
+<center>Jenkins pipeline 集成 github webhook </center>
+本篇文章主要介绍了以下内容:
+
 <ul>
-<li>编程: Python,Shell,Java,C</li>
-<li>前端: JavaScript,BootStrap</li>
-<li>容器及虚拟化: Docker,Kubernetes</li>
-<li>自动化:Ansible</li>
-<li>创意设计: PhothShop,Illustrator</li>
-<li>诗词歌赋</li>
+<li>Jenkins pipeline 简介</li>
+<li>Generic webhook trigger 简介</li>
+<li>github webhook 简介</li>
+<li>集成</li>
 </ul>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
-<li><p>QQ: 514482607</p>
-</li>
-<li><p>邮箱: <a href="mailto:whsasf@126.com" target="_blank" rel="noopener">whsasf@126.com</a></p>
-</li>
-</ul>
-<h2 id="网站备案信息"><a href="#网站备案信息" class="headerlink" title="网站备案信息"></a>网站备案信息</h2><p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener">沪ICP备19037220号-1</a></p>
+</blockquote>
+<hr>
+<h2 id="1-Jenkins-pipeline-简介"><a href="#1-Jenkins-pipeline-简介" class="headerlink" title="1. Jenkins pipeline 简介"></a>1. Jenkins pipeline 简介</h2><p>Jenkins 发展到2.x, 出现了pipeline，实现了真正意义上的 “pipeline as code”，即 <strong>完全的代码驱动构建</strong>。使用pipeline进行构建的过程跟用dockerfile进行镜像构建非常相似。pipeline是写在Jenkinsfile文件里面的。</p>
+<p>以下是一段经典的jenkins pipeline “hello world” 示例： </p>
+<pre><code>pipeline {
+    agent { docker &#39;centos:latest&#39; }
+    stages {
+        stage(&#39;build&#39;) {
+            steps {
+                sh &#39;echo helloworld!&#39;
+            }
+        }
+    }
+}</code></pre><p>其中，整个构建是在一个 最新版本的centos docker 镜像中构建，然后就能在输出中看到 “ hello world” 了。输出截图如下:</p>
+<img src="/2020/01/01/jenkins-pipeline-集成-github-webhook/hello_world.png" title="hello world">  
+
+<p>更多Jenkins知识，请参考官方网站: <a href="https://jenkins.io/n" target="_blank" rel="noopener">Jenkins教程</a> 。从图中可以看到整个构建过程是在blueocean中构建的，blueocean很有趣，具体参考教程。</p>
+<h2 id="2-Generic-webhook-trigger-简介"><a href="#2-Generic-webhook-trigger-简介" class="headerlink" title="2. Generic webhook trigger 简介"></a>2. Generic webhook trigger 简介</h2><h3 id="1-常见的构建触发有3种"><a href="#1-常见的构建触发有3种" class="headerlink" title="1. 常见的构建触发有3种:"></a>1. 常见的构建触发有3种:</h3><ol>
+<li>时间触发，类似于cron。</li>
+<li>代码仓库轮训触发，理论上轮训越频繁，持续集成的效果越好</li>
+<li>事件触发，种类很多。本章只介绍github webhook 触发。</li>
+</ol>
+<h3 id="2-Generic-webhook-trigger"><a href="#2-Generic-webhook-trigger" class="headerlink" title="2. Generic webhook trigger"></a>2. Generic webhook trigger</h3><p>Generic webhook trigger 是一个 jenkins的插件，用来支持事件触发，支持pipeline。意味着安装插件后，直接在pipeline编写触发接受规则即可。使用该插件的主要步骤如下：</p>
+<ol>
+<li>通过Jenkins 插件管理器安装该插件: <img src="/2020/01/01/jenkins-pipeline-集成-github-webhook/generic_install.png" title="Generic webhook trigger插件安装">  </li>
+<li></li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 whsasf@126.com </span>
@@ -761,6 +800,18 @@
     <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>jenkins pipeline 集成 github webhook</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">358</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="whsasf">whsasf</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-01-01, 15:55:05</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-30, 16:41:28</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/01/jenkins-pipeline-集成-github-webhook/" title="jenkins pipeline 集成 github webhook">https://blog.whsasf.com/2020/01/01/jenkins-pipeline-集成-github-webhook/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
